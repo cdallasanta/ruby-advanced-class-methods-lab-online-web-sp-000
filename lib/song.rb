@@ -49,4 +49,8 @@ class Song
     name = split[2]
     self.new_by_name(name)
   end
+
+  def self.destroy_all
+    @@all.clear
+  end
 end
