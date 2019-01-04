@@ -45,8 +45,8 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    split = filename.split(/[. ]/)
-    name = split[2]
+    song_title_with_extension = filename.split(' - ')
+    remove_extension = split[2].split('.')
     self.new_by_name(name)
   end
 
