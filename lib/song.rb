@@ -45,10 +45,12 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    song_title_with_extension = filename.split(' - ')
-    remove_extension = song_title_with_extension[1].split('.')
+    split_filename = filename.split(' - ')
+    artist = split_filename[0]
+    remove_extension = split_filename[1].split('.')
     name = remove_extension[0]
-    self.new_by_name(name)
+    newSong = self.find_or_create_by_name(name)
+    newSong.artist = artist
   end
 
   def self.destroy_all
