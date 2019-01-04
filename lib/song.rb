@@ -53,7 +53,7 @@ class Song
     newSong.artist_name = artist
   end
 
-  def self.create_by_name_from_filename(filename)
+  def self.create_from_filename(filename)
     split_filename = filename.split(' - ')
     artist = split_filename[0]
     remove_extension = split_filename[1].split('.')
