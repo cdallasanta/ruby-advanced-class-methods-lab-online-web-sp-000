@@ -54,6 +54,7 @@ class Song
     name = remove_extension[0]
     newSong = self.new_by_name(name)
     newSong.artist_name = artist
+    newSong
   end
 
   def self.create_from_filename(filename)
