@@ -50,7 +50,7 @@ class Song
     remove_extension = split_filename[1].split('.')
     name = remove_extension[0]
     newSong = self.find_or_create_by_name(name)
-    newSong.artist = artist
+    newSong.artist_name = artist
   end
 
   def self.destroy_all
